@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+    width: 6px;
+}
+body::-webkit-scrollbar-track{
+    background-color: rgba(220, 220, 220, 0.571);
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.219);
+    color: rgb(250, 211, 37);
+}
+.features:hover svg{
+    @apply text-yellow-400
+}
+.features:hover p{
+    @apply text-black
+}
