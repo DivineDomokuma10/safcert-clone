@@ -1,11 +1,10 @@
 import React from "react";
 
-
 const HowItWorks = () => {
   return (
     <section
       id="HIW"
-      className="max-w-full p-5 flex flex-col space-y-5 items-center bg-slate-50 md:px-12"
+      className="max-w-full p-5 flex flex-col space-y-5 items-center bg-slate-50 md:px-12 md:pb-40"
     >
       <div className="flex flex-col items-center">
         <h1 className="text-4xl text-center p-6">How it Work</h1>
@@ -16,7 +15,7 @@ const HowItWorks = () => {
         </p>
       </div>
       <div className="w-full flex flex-col space-y-5 md:space-y-0 md:flex-row md:space-x-5">
-        <div className="w-full flex flex-col space-y-9 bg-white rounded-xl hover:shadow-shadow-big p-9 md:bg-transparent">
+        <div className="w-full flex flex-col p-9 space-y-9 bg-white rounded-xl hover:shadow-shadow-big hover:bg-white md:bg-transparent">
           <div className="w-[90px] h-[90px] flex items-center justify-center rounded-2xl shadow-shadow-small bg-yellow-100">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +39,7 @@ const HowItWorks = () => {
             transcript payments and submit their requests.
           </p>
         </div>
-        <div className="w-full flex flex-col space-y-9 bg-white rounded-xl hover:shadow-shadow-big p-9 md:bg-transparent">
+        <div className="w-full flex flex-col p-9 space-y-9 bg-white rounded-xl hover:shadow-shadow-big hover:bg-white md:bg-transparent">
           <div className="w-[90px] h-[90px] flex items-center justify-center rounded-2xl shadow-shadow-small bg-yellow-100">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +63,7 @@ const HowItWorks = () => {
             to review transcript requests.
           </p>
         </div>
-        <div className="w-full flex flex-col space-y-9 bg-white rounded-xl hover:shadow-shadow-big p-9 md:bg-transparent">
+        <div className="w-full flex flex-col p-9 space-y-9 bg-white rounded-xl hover:shadow-shadow-big hover:bg-white md:bg-transparent">
           <div className="w-[90px] h-[90px] flex items-center justify-center rounded-2xl shadow-shadow-small bg-yellow-100">
             <svg
               xmlns="http://www.w3.org/2000/svg"

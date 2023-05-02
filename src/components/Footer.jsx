@@ -1,19 +1,34 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = ({ show }) => {
   return (
-    <footer className="w-screen flex flex-col items-center space-y-5 px-4 py-8 justify-between bg-slate-200">
-      <div className="w-full flex flex-col bg-white rounded-xl py-10 px-5 space-y-2 md:w-1/3 md:items-center md:py-4 md:space-y-5 md:absolute md:shadow-shadow-big md:left-[35%]">
-        <h1 className="text-[26px]">Sign Up</h1>
-        <button className="w-56 rounded-lg bg-black py-2 text-white text-sm hover:bg-gray-900 md:py-3">
-          Sign Up
-        </button>
-        <p className="text-sm text-gray-500">
-          our agent will contact you as soon as possible.
-        </p>
+    <footer
+      id="footer"
+      className="w-screen flex flex-col items-center space-y-5 px-4 py-8 justify-between bg-slate-200 md:relative md:px-10 md:pt-36"
+    >
+      <div className="w-full flex flex-col bg-white rounded-xl md:w-[90%] md:items-center md:absolute md:flex-row md:shadow-shadow-big md:-top-36">
+        <div className="md:w-1/2 md:h-80">
+          <img
+            src="/Artboard-2-copy.png"
+            alt=""
+            className="w-full h-full rounded-t-xl md:rounded-tr-none md:rounded-bl-xl"
+          />
+        </div>
+        <div className="py-10 px-5 space-y-3 md:py-4 md:px-20 md:space-y-5">
+          <h1 className="text-[26px] md:text-4xl">Sign Up</h1>
+          <button
+            onClick={() => show()}
+            className="w-56 rounded-lg bg-black py-2 text-white text-sm hover:bg-gray-900 md:w-80 md:py-3"
+          >
+            Sign Up
+          </button>
+          <p className="text-sm text-gray-500 md:text-base">
+            our agent will contact you as soon as possible.
+          </p>
+        </div>
       </div>
-      <section className="p-3 w-full flex flex-col space-y-10 border-b-2 border-gray-300">
-        <div className="space-y-3">
+      <section className="px-4 py-10 w-full flex flex-col space-y-10 border-b-2 border-gray-300 md:flex-row md:justify-between md:px-16">
+        <div className="space-y-3  md:w-[30%] pt-10">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -93,34 +108,61 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col">
-          <h1 className="py-5 text-xl font-semibold">Features</h1>
-          <p className="flex flex-col text-gray-800 text- space-y-2">
-            <a href="">Support</a>
-            <a href="">Help</a>
-            <a href="">Contact Us</a>
+          <h1 className="py-5 text-xl font-semibold md:">Features</h1>
+          <p className="flex flex-col text-gray-800 space-y-2 md:space-y-5 md:text-sm">
+            <a href="#footer" className="hover:text-gray-500">
+              Support
+            </a>
+            <a href="#footer" className="hover:text-gray-500">
+              Help
+            </a>
+            <a href="#footer" className="hover:text-gray-500">
+              Contact Us
+            </a>
           </p>
         </div>
         <div className="flex flex-col">
           <h1 className="py-5 text-xl font-semibold">Quick Links</h1>
-          <p className="flex flex-col text-gray-800 text- space-y-2">
-            <a href="">Articles & Blog</a>
-            <a href="">documentaton</a>
-            <a href="">Learn More</a>
-            <a href="">Tutorials</a>
-
+          <p className="flex flex-col text-gray-800 space-y-2 md:space-y-5 md:text-sm">
+            <a href="#footer" className="hover:text-gray-500">
+              Articles & Blog
+            </a>
+            <a href="#footer" className="hover:text-gray-500">
+              documentaton
+            </a>
+            <a href="#footer" className="hover:text-gray-500">
+              Learn More
+            </a>
+            <a href="#footer" className="hover:text-gray-500">
+              Tutorials
+            </a>
           </p>
         </div>
         <div className="flex flex-col">
           <h1 className="py-5 text-xl font-semibold">Company</h1>
-          <p className="flex flex-col text-gray-800 text- space-y-2">
-            <a href="">About Us</a>
-            <a href="">Team</a>
-            <a href="">Press</a>
+          <p className="flex flex-col text-gray-800 space-y-2 md:space-y-5 md:text-sm">
+            <a href="#footer" className="hover:text-gray-500">
+              About Us
+            </a>
+            <a href="#footer" className="hover:text-gray-500">
+              Team
+            </a>
+            <a href="#footer" className="hover:text-gray-500">
+              Press
+            </a>
           </p>
         </div>
       </section>
-      <div className="w-full flex flex-col">
-        <p>2022 FlexiSAF Edusoft</p>
+      <div className="w-full flex flex-col text-sm text-gray-600 p-5 text-center space-y-10 md:flex-row md:space-y-0 md:justify-between md:px-10">
+        <p className="">2022 FlexiSAF Edusoft. All rights reserved.</p>
+        <p className="space-x-7 text-xs">
+          <a href="#footer" className="hover:text-gray-500">
+            Privacy Policy
+          </a>
+          <a href="#footer" className="hover:text-gray-500">
+            Terms and Conditions
+          </a>
+        </p>
       </div>
     </footer>
   );

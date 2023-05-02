@@ -1,26 +1,30 @@
-import { set } from "react-hook-form";
+import Home from "./components/Home";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
-import { createContext, useState } from "react";
-import Home from "./components/Home";
 import Features from "./components/Features";
+import { useState } from "react";
 import HowItWorks from "./components/HowItWorks";
-
-export const store = createContext();
+import Form from "./components/subFeatures/Form";
 
 const App = () => {
+  const [showForm, setShowForm] = useState(false);
   const [showDropMenu, setShowDropMenu] = useState(false);
   const toggleDropMenu = () => setShowDropMenu(!showDropMenu);
+  const show = () => setShowForm(true);
+  const hide = () => setShowForm(false);
 
   return (
-    <main className="max-w-screen relative overflow-hidden flex flex-col items-center">
-      <store.Provider value={{ showDropMenu, toggleDropMenu }}>
-        <NavBar />
-        <Home />
-        <Features />
-        <HowItWorks />
-        <Footer />
-      </store.Provider>
+    <main className="max-w-screen overflow-auto flex flex-col items-center">
+      {showForm && <Form hide={hide}/>}
+      <NavBar
+        showDropMenu={showDropMenu}
+        toggleDropMenu={toggleDropMenu}
+        show={show}
+      />
+      <Home show={show} />
+      <Features show={show} />
+      <HowItWorks />
+      <Footer show={show} />
     </main>
   );
 };

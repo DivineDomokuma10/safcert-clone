@@ -16,9 +16,7 @@ body::-webkit-scrollbar-thumb{
     background-color: rgba(0, 0, 0, 0.219);
     color: rgb(250, 211, 37);
 }
-.features:hover svg{
-    @apply text-yellow-400
-}
-.features:hover p{
-    @apply text-black
+
+form::-webkit-scrollbar{
+    width: 0px;
 }

@@ -1,12 +1,10 @@
-import React, { useContext } from "react";
-import { store } from "../App";
+import React from "react";
 import { motion } from "framer-motion";
 
-const NavBar = () => {
-  const { showDropMenu, toggleDropMenu } = useContext(store);
+const NavBar = ({ showDropMenu, toggleDropMenu, show }) => {
   return (
     <>
-      <nav className="w-screen bg-white flex items-center p-5 justify-between shadow-sm fixed top-0 left-0 z-50">
+      <nav className="w-screen bg-white flex items-center p-5 justify-between shadow-sm fixed top-0 left-0 z-30">
         {/* logo svg */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -131,15 +129,15 @@ const NavBar = () => {
             How it works
           </a>
         </div>
-        <button className="hidden bg-black text-white px-6 rounded-md py-2 text-base font-semibold  hover:bg-amber-300 md:block">
+        <button onClick={() => show()} className="hidden bg-black text-white px-6 rounded-md py-2 text-base font-semibold  hover:bg-amber-300 md:block">
           Sign Up
         </button>
       </nav>
       {showDropMenu && (
         <motion.div
           initial={{ y: -500 }}
-          animate={{y: 0}}
-          transition={{duration: .5}}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.5 }}
           className="w-full flex flex-col space-y-7 shadow-md px-4 py-3 fixed z-10 top-[73px] bg-white md:hidden"
         >
           <div className="w-full flex flex-col">
@@ -162,7 +160,7 @@ const NavBar = () => {
               How it works
             </a>
           </div>
-          <button className="bg-black text-white px-6 rounded-md py-2 text-base font-semibold  hover:bg-gray-900">
+          <button onClick={() => show()} className="bg-black text-white px-6 rounded-md py-2 text-base font-semibold  hover:bg-gray-900">
             Sign Up
           </button>
         </motion.div>

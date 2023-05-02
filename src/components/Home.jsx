@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Home = () => {
+const Home = ({show}) => {
   return (
     <section
       id="home"
@@ -25,7 +25,10 @@ const Home = () => {
           transcripts, statements of results, certificates and process the
           requests in a secure, easy to use and convenient way
         </p>
-        <button className="px-5 py-2 text-sm text-white rounded-md bg-black hover:bg-gray-900">
+        <button
+          onClick={() => show()}
+          className="px-5 py-2 text-sm text-white rounded-md bg-black hover:bg-gray-900"
+        >
           Sign Up
         </button>
       </motion.div>

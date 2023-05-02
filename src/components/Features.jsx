@@ -4,7 +4,7 @@ import ForInstitution from "./subFeatures/ForInstitution";
 import Alumni from "./subFeatures/Alumni";
 import Emloyer from "./subFeatures/Emloyer";
 
-const Features = () => {
+const Features = ({ show }) => {
   const [features, setFeatures] = useState([
     {
       id: 1,
@@ -125,7 +125,10 @@ const Features = () => {
             in the world. Documents and information canbe verified using the
             solution when integrated
           </p>
-          <button className="w-full bg-black text-white py-2 rounded-md hover:bg-slate-900">
+          <button
+            onClick={() => show()}
+            className="w-full bg-black text-white py-2 rounded-md hover:bg-slate-900"
+          >
             Sign Up
           </button>
         </div>
